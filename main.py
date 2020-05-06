@@ -64,7 +64,7 @@ def upload(filepath):
     while response is None:
         status, response = request.next_chunk()
         if status:
-            print_inline("Uploaded %.2f%%." % (status.progress() * 100))
+            print_inline("Uploaded %.2f%%" % (status.progress() * 100))
     print("Upload Complete!")
     print('File ID: %s - File Name: %s' % (response.get('id'), filename))
 
